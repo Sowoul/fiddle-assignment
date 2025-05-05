@@ -24,8 +24,6 @@ services:
       - "3000:3000"
     depends_on:
       - app
-    environment:
-      - NODE_ENV=production
 
   redis:
     image: redis:alpine
