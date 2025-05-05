@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./api
+    working_dir: /app
+    volumes:
+      - ./api:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+    environment:
+      - MISTRAL_API_KEY=AcSHqWjjSgA7JWqsf0p4k1gSBAaUg8Qu
+
+  frontend:
+    build:
+      context: ./frontend
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - app
+    environment:
+      - NODE_ENV=production
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
