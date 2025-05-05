@@ -8,7 +8,8 @@ I have tried to set the project up to be production ready, so the entire thing r
 ## Instructions:
 1. Use the wsl, or be on a linux machine
 2. git clone this repo
-3. Install docker and docker-compose, with the package manager based on the linux distro
-4. Start the docker service if not already by ```sudo systemctl start docker```
-5. Run ``` sudo docker compose up --build```
-6. Go to localhost:3000, and enjoy the app!
+3. Enter the mistral api key in docker-compose.yml
+4. Install docker and docker-compose, with the package manager based on the linux distro
+5. Start the docker service if not already by ```sudo systemctl start docker```
+6. Run ``` sudo docker compose up --build```
+7. Go to localhost:3000, and enjoy the app!
