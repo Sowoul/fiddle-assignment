@@ -17,9 +17,9 @@ services:
   frontend:
     build:
       context: ./frontend
-    working_dir: /app
+    working_dir: /frontend
     volumes:
-      - ./frontend:/app
+      - ./frontend:/frontend
     ports:
       - "3000:3000"
     depends_on:
