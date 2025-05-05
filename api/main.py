@@ -56,7 +56,6 @@ def change_text():
 
     from_cache = cache.getCache(key)
     if from_cache:
-        # Store the original and transformed as a pair
         PairHistory(sid).add_undo(txt, from_cache)
         return jsonify({"transformed": from_cache, "session_id": sid})
 
@@ -93,7 +92,6 @@ IMPORTANT: Return ONLY the rewritten text. Do not include ANY explanations, intr
             changed = "\n".join(filtered_lines).strip()
 
         cache.addCache(key, changed)
-        # Store the original and transformed as a pair
         PairHistory(sid).add_undo(txt, changed)
         return jsonify({"transformed": changed, "session_id": sid})
 
