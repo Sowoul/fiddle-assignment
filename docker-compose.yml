@@ -12,7 +12,7 @@ services:
     depends_on:
       - redis
     environment:
-      - MISTRAL_API_KEY=AcSHqWjjSgA7JWqsf0p4k1gSBAaUg8Qu
+      - MISTRAL_API_KEY=key
 
   frontend:
     build:
